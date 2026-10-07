@@ -1,0 +1,645 @@
+/* ==========================================================================
+   ROYAL FURNITURE MALL — VARIANT 04: CONTEMPORARY ARCHITECTURAL STUDIO
+   High-Contrast Editorial Magazine, Terracotta Clay & Structural Form
+   ========================================================================== */
+
+:root {
+  --bg-chalk: #F8F7F4;
+  --bg-sand: #EEEAE2;
+  --bg-pure: #FFFFFF;
+  --bg-dark: #191816;
+  
+  --terracotta: #C85A32;
+  --terracotta-dark: #A23F1C;
+  --terracotta-soft: rgba(200, 90, 50, 0.1);
+  
+  --ink: #181716;
+  --ink-secondary: #524E48;
+  --ink-muted: #847E76;
+  --hairline: #DDD7CE;
+  
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-display: 'Cinzel', serif;
+  --font-sans: 'Inter', -apple-system, sans-serif;
+  --font-mono: 'Spline Sans Mono', monospace;
+  
+  --radius-sm: 8px;
+  --radius-pill: 9999px;
+  --header-height: 84px;
+}
+
+/* Global Resets & Scrollbar Removal */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+}
+
+*::-webkit-scrollbar, html::-webkit-scrollbar, body::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+html {
+  background: var(--bg-chalk);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg-chalk);
+  color: var(--ink);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Header */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--header-height);
+  background: rgba(248, 247, 244, 0.95);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 2px solid var(--ink);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 clamp(24px, 4vw, 64px);
+  z-index: 100;
+}
+
+.brand-wrap {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.brand-main {
+  font-family: var(--font-display);
+  font-size: 17px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  color: var(--ink);
+}
+
+.brand-studio-badge {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  background: var(--terracotta);
+  color: #FFF;
+  padding: 3px 8px;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  letter-spacing: 0.16em;
+}
+
+.nav-links {
+  display: flex;
+  gap: 32px;
+}
+
+.nav-link {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-secondary);
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+  color: var(--terracotta);
+}
+
+.nav-btn {
+  background: var(--ink);
+  color: #FFF;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  padding: 12px 26px;
+  border-radius: var(--radius-sm);
+  transition: all 0.25s ease;
+}
+
+.nav-btn:hover {
+  background: var(--terracotta);
+}
+
+/* Contemporary Editorial Hero (Split Screen) */
+.contemporary-hero {
+  padding-top: calc(var(--header-height) + 40px);
+  padding-bottom: 80px;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-left: clamp(24px, 4.5vw, 64px);
+  padding-right: clamp(24px, 4.5vw, 64px);
+}
+
+.hero-grid-split {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: clamp(36px, 6vw, 80px);
+  align-items: center;
+}
+
+.hero-text-side {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.tag-banner {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--terracotta);
+  background: var(--terracotta-soft);
+  padding: 6px 14px;
+  border-radius: var(--radius-sm);
+  width: fit-content;
+}
+
+.hero-title {
+  font-family: var(--font-serif);
+  font-size: clamp(40px, 5vw, 76px);
+  font-weight: 700;
+  line-height: 1.02;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+}
+
+.hero-title em {
+  font-style: italic;
+  font-weight: 400;
+  color: var(--terracotta);
+}
+
+.hero-body {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--ink-secondary);
+  max-width: 540px;
+}
+
+.hero-action-row {
+  display: flex;
+  gap: 16px;
+  margin-top: 10px;
+}
+
+.btn-terracotta {
+  background: var(--terracotta);
+  color: #FFF;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  padding: 16px 36px;
+  border-radius: var(--radius-sm);
+  transition: all 0.25s ease;
+}
+
+.btn-terracotta:hover {
+  background: var(--terracotta-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(200, 90, 50, 0.3);
+}
+
+.btn-outline-box {
+  border: 2px solid var(--ink);
+  color: var(--ink);
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  padding: 16px 32px;
+  border-radius: var(--radius-sm);
+  transition: all 0.25s ease;
+}
+
+.btn-outline-box:hover {
+  background: var(--ink);
+  color: #FFF;
+}
+
+/* Hero Feature Showcase (Tabbed Frame) */
+.hero-visual-frame {
+  background: var(--bg-sand);
+  border: 2px solid var(--ink);
+  border-radius: 14px;
+  padding: 36px;
+  position: relative;
+  min-height: 480px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 12px 12px 0px var(--ink);
+}
+
+.hero-visual-frame img {
+  max-height: 420px;
+  object-fit: contain;
+  filter: drop-shadow(0 16px 24px rgba(0, 0, 0, 0.12));
+  transition: transform 0.4s ease;
+}
+
+.hero-visual-frame:hover img {
+  transform: scale(1.04);
+}
+
+.frame-stamp {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: var(--ink);
+  background: #FFF;
+  border: 1px solid var(--ink);
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+}
+
+/* 4-Piece Contemporary Grid */
+.studio-grid-section {
+  padding: 80px clamp(24px, 4.5vw, 64px);
+  background: #FFF;
+  border-top: 2px solid var(--ink);
+  border-bottom: 2px solid var(--ink);
+}
+
+.section-editorial-header {
+  max-width: 1400px;
+  margin: 0 auto 54px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-bottom: 2px solid var(--ink);
+  padding-bottom: 24px;
+}
+
+.section-editorial-header h2 {
+  font-family: var(--font-serif);
+  font-size: clamp(32px, 4vw, 54px);
+  line-height: 1.1;
+  font-weight: 700;
+}
+
+.section-editorial-header span {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--terracotta);
+}
+
+.studio-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.studio-card {
+  border: 2px solid var(--ink);
+  border-radius: 12px;
+  background: var(--bg-chalk);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.studio-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 8px 8px 0px var(--ink);
+}
+
+.studio-card-img {
+  height: 240px;
+  background: var(--bg-sand);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border-bottom: 2px solid var(--ink);
+}
+
+.studio-card-img img {
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.studio-card-body {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+}
+
+.studio-card-num {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--terracotta);
+}
+
+.studio-card-title {
+  font-family: var(--font-serif);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.studio-card-desc {
+  font-size: 12.5px;
+  color: var(--ink-secondary);
+  line-height: 1.6;
+}
+
+.studio-card-foot {
+  margin-top: auto;
+  padding-top: 14px;
+  border-top: 1px dashed var(--hairline);
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  font-weight: 700;
+}
+
+/* 10-Year Warranty Section (Contemporary Brutalist Proof) */
+.contemporary-warranty {
+  padding: clamp(80px, 10vh, 120px) clamp(24px, 4.5vw, 64px);
+  background: var(--bg-chalk);
+}
+
+.warranty-row-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.warranty-slab {
+  background: #FFF;
+  border: 2px solid var(--ink);
+  border-radius: 12px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  box-shadow: 6px 6px 0px var(--ink);
+  transition: all 0.25s ease;
+}
+
+.warranty-slab:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 10px 10px 0px var(--terracotta);
+}
+
+.slab-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid var(--ink);
+  padding-bottom: 12px;
+}
+
+.slab-num {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--terracotta);
+}
+
+.slab-badge {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 700;
+  background: var(--ink);
+  color: #FFF;
+  padding: 3px 8px;
+  border-radius: var(--radius-sm);
+}
+
+.slab-title {
+  font-family: var(--font-serif);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.slab-desc {
+  font-size: 12px;
+  line-height: 1.65;
+  color: var(--ink-secondary);
+}
+
+.slab-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: auto;
+  padding-top: 14px;
+  border-top: 1px dashed var(--hairline);
+  font-size: 11.5px;
+  color: var(--ink);
+  font-weight: 500;
+}
+
+/* Gallery Magazine Lookbook */
+.contemporary-gallery {
+  padding: 80px clamp(24px, 4.5vw, 64px);
+  background: var(--ink);
+  color: #FFF;
+}
+
+.gallery-flex {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  max-width: 1400px;
+  margin: 40px auto 0 auto;
+}
+
+.gallery-card-dark {
+  border: 2px solid #FFF;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 10px 10px 0px var(--terracotta);
+}
+
+.gallery-card-dark img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.gallery-card-dark:hover img {
+  transform: scale(1.03);
+}
+
+.gallery-card-dark-foot {
+  padding: 20px;
+  background: #111;
+  border-top: 2px solid #FFF;
+}
+
+.gallery-card-dark-foot h4 {
+  font-family: var(--font-serif);
+  font-size: 18px;
+}
+
+/* Best Sellers */
+.contemporary-catalog {
+  padding: 80px clamp(24px, 4.5vw, 64px);
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.catalog-grid-2x2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.catalog-block {
+  background: #FFF;
+  border: 2px solid var(--ink);
+  border-radius: 12px;
+  padding: 28px;
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  box-shadow: 6px 6px 0px var(--ink);
+  transition: all 0.25s ease;
+}
+
+.catalog-block:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 10px 10px 0px var(--terracotta);
+}
+
+.catalog-thumb-box {
+  width: 90px;
+  height: 90px;
+  background: var(--bg-sand);
+  border: 1px solid var(--ink);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  flex-shrink: 0;
+}
+
+.catalog-thumb-box img {
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.catalog-block-info {
+  flex: 1;
+}
+
+.catalog-block-info h4 {
+  font-family: var(--font-serif);
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.catalog-block-info p {
+  font-size: 12px;
+  color: var(--ink-secondary);
+  margin-top: 4px;
+}
+
+/* Footer */
+.site-footer {
+  padding: 60px clamp(24px, 4vw, 64px);
+  background: var(--ink);
+  color: #FFF;
+  border-top: 2px solid var(--terracotta);
+  text-align: center;
+}
+
+.footer-copy {
+  font-size: 12px;
+  color: var(--ink-muted);
+  margin-top: 8px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .hero-grid-split {
+    grid-template-columns: 1fr;
+  }
+  .studio-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .warranty-row-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .gallery-flex {
+    grid-template-columns: 1fr;
+  }
+  .catalog-grid-2x2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .nav-links {
+    display: none;
+  }
+  .studio-grid {
+    grid-template-columns: 1fr;
+  }
+  .warranty-row-grid {
+    grid-template-columns: 1fr;
+  }
+  .catalog-block {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
